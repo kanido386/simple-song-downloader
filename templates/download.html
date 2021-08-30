@@ -15,17 +15,9 @@
   <div class="col-md-6">
     <div class="h-100 p-5 m-5 bg-info bg-gradient bg-opacity-50 border rounded-3">
       <h1>載歌小幫手</h1>
-      <form action="/download" method="post">
-        <div class="mt-5 mb-3">
-          <label for="inputArtist" class="form-label">誰唱的？</label>
-          <input type="text" class="form-control" id="inputArtist" name="artist">
-        </div>
-        <div class="mb-5">
-          <label for="inputSong" class="form-label">歌曲名稱</label>
-          <input type="text" class="form-control" id="inputSong" name="song">
-        </div>
-        <button type="submit" class="btn btn-primary">送出</button>
-      </form>
+      <a class="btn btn-primary mt-5" href="{{ downloadUrl }}" target="_blank" role="button">下載</a>
+      <br>
+      <a class="btn btn-light mt-5" href="/" role="button">回上一頁</a>
     </div>
   </div>
 
