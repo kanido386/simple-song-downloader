@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 import webbrowser
 # from youtube_agent import YoutubeAgent
 from googleapiclient.discovery import build
-from werkzeug.utils import redirect
+import requests
+from bs4 import BeautifulSoup
 
 load_dotenv()
 
@@ -22,9 +23,16 @@ def download():
     artist = request.form["artist"]
     song = request.form["song"]
 
-    # TODO:
-    # https://www.youtube.com/results?search_query=bruno+mars+grenade+lyrics
-    # https://www.youtube.com/results?search_query=王藍茵 惡作劇
+    # TODO: it looks like youtube blocks the scraping...
+    # # https://www.youtube.com/results?search_query=bruno+mars+grenade+lyrics
+    # # https://www.youtube.com/results?search_query=王藍茵 惡作劇
+    # url = 'https://www.youtube.com/results?search_query=bruno+mars+grenade+lyrics'
+    # headers = {'user-agent': 'Mozilla/5.0'}
+    # source = requests.get(url, headers=headers)
+    # soup = BeautifulSoup(source.text, 'html.parser')
+    # urls = soup.find_all('a')
+    # print(urls)
+
 
     youTubeApiKey = os.environ.get("YOUTUBE_API_KEY")
     youtube = build('youtube', 'v3', developerKey=youTubeApiKey)
