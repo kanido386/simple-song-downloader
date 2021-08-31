@@ -13,11 +13,21 @@
 <body>
 
   <div class="col-md-6">
-    <div class="h-100 p-5 m-5 bg-info bg-gradient bg-opacity-50 border rounded-3">
-      <h1>載歌小幫手</h1>
-      <a class="btn btn-primary mt-5" href="{{ downloadUrl }}" target="_blank" role="button">下載</a>
+    <div class="h-100 m-5 bg-info bg-gradient bg-opacity-50 border rounded-3">
+      <h1 class="p-5">載歌小幫手</h1>
+
+      <iframe width="100%" src="{{ embedVideoUrls[0] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="btn btn-primary mx-5 my-3" href="{{ downloadUrls[0] }}" target="_blank" role="button">下載</a>
+      
+      <iframe width="100%" src="{{ embedVideoUrls[1] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="btn btn-primary mx-5 my-3" href="{{ downloadUrls[1] }}" target="_blank" role="button">下載</a>
+      
+      <iframe width="100%" src="{{ embedVideoUrls[2] }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="btn btn-primary mx-5 my-3" href="{{ downloadUrls[2] }}" target="_blank" role="button">下載</a>
+      
       <br>
-      <a class="btn btn-light mt-5" href="/" role="button">回上一頁</a>
+      
+      <a class="btn btn-light mx-5 my-3" href="/" role="button">回上一頁</a>
     </div>
   </div>
 
