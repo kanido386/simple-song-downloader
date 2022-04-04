@@ -48,16 +48,16 @@ def download():
     # firstVideo = res['items'][0]
     # videoId = firstVideo['id']['videoId']
     # videoUrl = f'https://www.youtube.com/watch?v={videoId}'
-    Videos = res['items'][0:3]
-    videoIds = [Videos[i]['id']['videoId'] for i in range(3)]
+    Videos = res['items'][0:5]
+    videoIds = [Videos[i]['id']['videoId'] for i in range(5)]
     videoUrls = [f'https://www.youtube.com/watch?v={videoId}' for videoId in videoIds]
 
     # https://www.youtube.com/embed/{videoId}
-    temps = [videoUrls[i].split('watch?v=') for i in range(3)]
-    embedVideoUrls = [f'{temps[i][0]}embed/{temps[i][1]}' for i in range(3)]
+    temps = [videoUrls[i].split('watch?v=') for i in range(5)]
+    embedVideoUrls = [f'{temps[i][0]}embed/{temps[i][1]}' for i in range(5)]
 
-    temps = [videoUrls[i].split('youtube') for i in range(3)]
-    downloadUrls = [f'{temps[i][0]}backupmp3{temps[i][1]}' for i in range(3)]
+    temps = [videoUrls[i].split('youtube') for i in range(5)]
+    downloadUrls = [f'{temps[i][0]}backupmp3{temps[i][1]}' for i in range(5)]
     
     return render_template("download.html", embedVideoUrls=embedVideoUrls, downloadUrls=downloadUrls)
 
